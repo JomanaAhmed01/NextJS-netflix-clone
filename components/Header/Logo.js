@@ -5,5 +5,7 @@ export default function Logo({children, ...restProps}) {
 }
 
 export const Image = styled.img`
-  
+  margin-left: 55px;
+  margin-top: 20px;
+  width: 108px;
 `
