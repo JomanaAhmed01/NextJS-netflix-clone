@@ -8,5 +8,5 @@ export default function HeaderContainer() {
 }
 
 export const Wrapper = styled.div`
-  border: 3px solid red;
+  background: url(/images/misc/home-bg.jpg) left top / cover no-repeat;
 `
