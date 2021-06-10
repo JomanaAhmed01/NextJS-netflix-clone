@@ -1,9 +1,9 @@
-import HeaderContainer from '../components/Navbar/HeaderContainer'
+import HeaderCompound from '../compounds/HeaderCompound'
 
 export default function Home() {
   return(
     <>
-      <HeaderContainer />
+      <HeaderCompound />
     </>
   )
 }
