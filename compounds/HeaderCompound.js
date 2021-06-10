@@ -1,9 +1,9 @@
-import HeaderContainer from '../components/Header/HeaderContainer'
+import HeaderWrapper from "../components/Header/Navbar/HeaderWrapper"
 
 export default function HeaderCompound() {
   return (
     <>
-      <HeaderContainer />
+      <HeaderWrapper />
     </>
   )
 }
