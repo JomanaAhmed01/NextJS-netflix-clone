@@ -1,8 +1,9 @@
-import React from "react"
+import React from 'react'
+import styled from 'styled-components'
 
 export default function HeaderContainer() {
   return (
-    <Wrapper></Wrapper>
+    <Wrapper>xxxxxx</Wrapper>
   )
 }
 

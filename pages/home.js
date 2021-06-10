@@ -1,4 +1,9 @@
+import HeaderContainer from '../components/Navbar/HeaderContainer'
 
 export default function Home() {
-  return <>ssssssssssssss</>
+  return(
+    <>
+      <HeaderContainer />
+    </>
+  )
 }
