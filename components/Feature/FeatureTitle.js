@@ -5,7 +5,6 @@ export default function FeatureTitle({ children, ...restProps }) {
 }
 
 export const Title = styled.h1`
-  border: 3px solid yellow;
   width: 640px;
   color: #ffffff;
   text-align: center;
