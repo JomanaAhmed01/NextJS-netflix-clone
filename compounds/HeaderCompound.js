@@ -3,6 +3,7 @@ import NavbarContainer from '../components/Header/NavbarContainer'
 import Logo from '../components/Header/Logo'
 import SigninBtn from '../components/Header/SigninBtn'
 import FeatureWrapper from '../components/Feature/FeatureWrapper'
+import FeatureTitle from '../components/Feature/FeatureTitle'
 
 export default function HeaderCompound() {
   return (
@@ -13,7 +14,9 @@ export default function HeaderCompound() {
           <SigninBtn />
         </NavbarContainer>
 
-        <FeatureWrapper></FeatureWrapper>
+        <FeatureWrapper>
+          <FeatureTitle />
+        </FeatureWrapper>
       </HeaderContainer>
     </>
   )
