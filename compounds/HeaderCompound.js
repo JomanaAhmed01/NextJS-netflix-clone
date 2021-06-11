@@ -4,6 +4,7 @@ import Logo from '../components/Header/Logo'
 import SigninBtn from '../components/Header/SigninBtn'
 import FeatureWrapper from '../components/Feature/FeatureWrapper'
 import FeatureTitle from '../components/Feature/FeatureTitle'
+import FeatureSubtitle from '../components/Feature/FeatureSubtitle'
 
 export default function HeaderCompound() {
   return (
@@ -16,6 +17,7 @@ export default function HeaderCompound() {
 
         <FeatureWrapper>
           <FeatureTitle />
+          <FeatureSubtitle />
         </FeatureWrapper>
       </HeaderContainer>
     </>
