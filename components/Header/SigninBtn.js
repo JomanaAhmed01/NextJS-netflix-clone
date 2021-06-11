@@ -13,7 +13,16 @@ export const SignInButton = styled.a`
   padding-top: 7px;
   padding-bottom: 7px;
   border-radius: 3px;
-  margin-bottom: 40px;
   margin-top: 20px;
-  margin-right: 58px;
+  margin-left: auto;
+  margin-right: -28px;
+
+  @media screen and (max-width: 550px) {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-right: -28px;
+  }
 `

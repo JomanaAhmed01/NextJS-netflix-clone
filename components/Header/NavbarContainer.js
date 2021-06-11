@@ -5,5 +5,9 @@ export default function NavbarContainer({children, ...restProps}) {
 }
 
 export const Wrapper = styled.div`
-  border: 3px solid yellow;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 180px;
+  padding-top: 10px;
 `
