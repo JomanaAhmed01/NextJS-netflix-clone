@@ -6,5 +6,5 @@ export default function HeaderContainer({children, ...restProps}) {
 
 export const Wrapper = styled.div`
   background: url(/images/misc/home-bg.jpg) left top / cover no-repeat;
-  border-bottom: 4px solid rgb(34, 34, 34);
+  border-bottom: 10px solid rgb(34, 34, 34);
 `
