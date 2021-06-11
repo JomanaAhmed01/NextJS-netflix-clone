@@ -5,7 +5,6 @@ export default function OptFormWrapper({ children, ...restProps }) {
 }
 
 export const Wrapper = styled.div`
-  border: 3px solid yellow;
   display: flex;
   justify-content: center;
 

@@ -7,6 +7,7 @@ import FeatureTitle from '../components/Feature/FeatureTitle'
 import FeatureSubtitle from '../components/Feature/FeatureSubtitle'
 import OptFormWrapper from '../components/OptForm/OptFormWrapper'
 import OptFormEmail from '../components/OptForm/OptFormEmail'
+import OptFormBtn from '../components/OptForm/OptFormBtn'
 
 export default function HeaderCompound() {
   return (
@@ -24,6 +25,7 @@ export default function HeaderCompound() {
 
         <OptFormWrapper>
           <OptFormEmail />
+          <OptFormBtn />
         </OptFormWrapper>
       </HeaderContainer>
     </>
