@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export default function HeaderContainer({children, ...restProps}) {
-  return <Wrapper {...restProps}>{children}xcsczsdfsgeg</Wrapper>
+  return <Wrapper {...restProps}>{children}</Wrapper>
 }
 
 export const Wrapper = styled.div`

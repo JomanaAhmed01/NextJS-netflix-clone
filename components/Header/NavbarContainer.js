@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export default function NavbarContainer({children, ...restProps}) {
-  return <Wrapper {...restProps}>{children}c33333333</Wrapper>
+  return <Wrapper {...restProps}>{children}</Wrapper>
 }
 
 export const Wrapper = styled.div`
