@@ -16,6 +16,7 @@ export const Subtitle = styled.p`
   font-size: 19px;
   margin-left: auto;
   margin-right: auto;
+  cursor: context-menu;
 
   @media screen and (max-width: 550px) {
     font-size: 18px;
