@@ -4,6 +4,4 @@ export default function JumboImage({ children, ...restProps }) {
   return <Image {...restProps}>{children}</Image>
 }
 
-export const Image = styled.img`
-  width: 348px;
-`
+export const Image = styled.img``
