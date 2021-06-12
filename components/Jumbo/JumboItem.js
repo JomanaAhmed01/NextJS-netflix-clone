@@ -5,9 +5,12 @@ export default function JumboItem({ children, ...restProps }) {
 }
 
 export const Wrapper = styled.div`
+  width: 1110px;
   display: flex;
   justify-content: center;
   padding: 30px 100px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (max-width: 950px) {
     flex-direction: column;

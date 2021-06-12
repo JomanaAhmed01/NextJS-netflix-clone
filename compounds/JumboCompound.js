@@ -4,6 +4,7 @@ import JumboTextWrapper from '../components/Jumbo/JumboTextWrapper'
 import JumboTitle from '../components/Jumbo/JumboTitle'
 import JumboSubtitle from '../components/Jumbo/JumboSubtitle'
 import JumboImageWrapper from '../components/Jumbo/JumboImageWrapper'
+import JumboImage from '../components/Jumbo/JumboImage'
 
 export default function JumboCompound() {
   return (
@@ -15,7 +16,9 @@ export default function JumboCompound() {
             <JumboSubtitle />
           </JumboTextWrapper>
 
-          <JumboImageWrapper></JumboImageWrapper>
+          <JumboImageWrapper>
+            <JumboImage src='/images/misc/home-tv.jpg'/>
+          </JumboImageWrapper>
         </JumboItem>
       </JumboWrapper>
     </>
