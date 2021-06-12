@@ -44,7 +44,21 @@ export default function JumboCompound() {
 
         <Separator />
 
-        
+        <JumboItem>
+          <JumboTextWrapper>
+            <JumboTitle>Watch everywhere.</JumboTitle>
+            <JumboSubtitle>
+              Stream unlimited films and TV programmes on your phone, tablet,
+              laptop and TV without paying more.
+            </JumboSubtitle>
+          </JumboTextWrapper>
+
+          <JumboImageWrapper>
+            <JumboImage src="/images/misc/home-imac.jpg" width="100%"/>
+          </JumboImageWrapper>
+        </JumboItem>
+
+        <Separator />
       </JumboWrapper>
     </>
   )
