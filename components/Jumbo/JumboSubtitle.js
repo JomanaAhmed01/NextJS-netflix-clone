@@ -3,8 +3,7 @@ import styled from "styled-components"
 export default function JumboSubtitle({ children, ...restProps }) {
   return (
     <Subtitle {...restProps}>
-      {children}Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
-      Blu-ray players and more.
+      {children}
     </Subtitle>
   )
 }

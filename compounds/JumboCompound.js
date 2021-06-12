@@ -13,12 +13,15 @@ export default function JumboCompound() {
       <JumboWrapper>
         <JumboItem>
           <JumboTextWrapper>
-            <JumboTitle />
-            <JumboSubtitle />
+            <JumboTitle>Enjoy on your TV.</JumboTitle>
+            <JumboSubtitle>
+              Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
+              Blu-ray players and more.
+            </JumboSubtitle>
           </JumboTextWrapper>
 
           <JumboImageWrapper>
-            <JumboImage src='/images/misc/home-tv.jpg'/>
+            <JumboImage src="/images/misc/home-tv.jpg" />
           </JumboImageWrapper>
         </JumboItem>
 

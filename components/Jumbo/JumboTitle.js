@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export default function JumboTitle({ children, ...restProps }) {
-  return <Title {...restProps}>{children}Enjoy on your TV.</Title>
+  return <Title {...restProps}>{children}</Title>
 }
 
 export const Title = styled.h1`
