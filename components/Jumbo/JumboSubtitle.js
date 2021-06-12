@@ -16,5 +16,6 @@ export const Subtitle = styled.p`
   @media (max-width: 950px) {
     width: initial;
     font-size: 20px;
+    text-align: center;
   }
 `

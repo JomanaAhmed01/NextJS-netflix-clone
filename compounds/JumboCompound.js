@@ -13,7 +13,7 @@ export default function JumboCompound() {
       <JumboWrapper>
         <JumboItem>
           <JumboTextWrapper>
-            <JumboTitle>Enjoy on your TV.</JumboTitle>
+            <JumboTitle width="100%">Enjoy on your TV.</JumboTitle>
             <JumboSubtitle>
               Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
               Blu-ray players and more.
@@ -21,7 +21,7 @@ export default function JumboCompound() {
           </JumboTextWrapper>
 
           <JumboImageWrapper>
-            <JumboImage src="/images/misc/home-tv.jpg" width="348px" />
+            <JumboImage src="/images/misc/home-tv.jpg" width="100%" />
           </JumboImageWrapper>
         </JumboItem>
 
@@ -29,16 +29,16 @@ export default function JumboCompound() {
 
         <JumboItem>
           <JumboTextWrapper>
-            <JumboTitle>
+            <JumboTitle width="100%">
               Download your programmes to watch on the go.
             </JumboTitle>
-            <JumboSubtitle>
+            <JumboSubtitle width="100%">
               Save your data and watch all your favourites offline.
             </JumboSubtitle>
           </JumboTextWrapper>
 
           <JumboImageWrapper>
-            <JumboImage src="/images/misc/home-mobile.jpg" width="185px" />
+            <JumboImage src="/images/misc/home-mobile.jpg" width="100%" />
           </JumboImageWrapper>
         </JumboItem>
 
@@ -46,15 +46,15 @@ export default function JumboCompound() {
 
         <JumboItem>
           <JumboTextWrapper>
-            <JumboTitle>Watch everywhere.</JumboTitle>
-            <JumboSubtitle>
+            <JumboTitle width="100%">Watch everywhere.</JumboTitle>
+            <JumboSubtitle width="100%">
               Stream unlimited films and TV programmes on your phone, tablet,
               laptop and TV without paying more.
             </JumboSubtitle>
           </JumboTextWrapper>
 
           <JumboImageWrapper>
-            <JumboImage src="/images/misc/home-imac.jpg" width="100%"/>
+            <JumboImage src="/images/misc/home-imac.jpg" width="100%" />
           </JumboImageWrapper>
         </JumboItem>
 

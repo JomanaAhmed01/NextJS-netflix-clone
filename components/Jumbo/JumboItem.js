@@ -5,9 +5,10 @@ export default function JumboItem({ children, ...restProps }) {
 }
 
 export const Wrapper = styled.div`
-  width: 1110px;
+  width: 90%;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 30px 100px;
   margin-left: auto;
   margin-right: auto;
