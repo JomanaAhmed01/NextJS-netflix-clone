@@ -21,11 +21,30 @@ export default function JumboCompound() {
           </JumboTextWrapper>
 
           <JumboImageWrapper>
-            <JumboImage src="/images/misc/home-tv.jpg" />
+            <JumboImage src="/images/misc/home-tv.jpg" width="348px" />
           </JumboImageWrapper>
         </JumboItem>
 
         <Separator />
+
+        <JumboItem>
+          <JumboTextWrapper>
+            <JumboTitle>
+              Download your programmes to watch on the go.
+            </JumboTitle>
+            <JumboSubtitle>
+              Save your data and watch all your favourites offline.
+            </JumboSubtitle>
+          </JumboTextWrapper>
+
+          <JumboImageWrapper>
+            <JumboImage src="/images/misc/home-mobile.jpg" width="185px" />
+          </JumboImageWrapper>
+        </JumboItem>
+
+        <Separator />
+
+        
       </JumboWrapper>
     </>
   )
