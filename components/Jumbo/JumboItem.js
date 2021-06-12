@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export default function JumboWrapper({ children, ...restProps }) {
+export default function JumboItem({ children, ...restProps }) {
   return <Wrapper {...restProps}>{children}</Wrapper>
 }
 
