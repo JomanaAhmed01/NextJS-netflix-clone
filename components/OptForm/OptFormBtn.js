@@ -9,7 +9,7 @@ export const Button = styled.a`
   text-decoration: none;
   color: #ffffff;
   font-size: 25px;
-  padding: 13.5px 40px;
+  padding: 13px 40px;
   margin-bottom: 150px;
 
   @media (max-width: 950px) {
