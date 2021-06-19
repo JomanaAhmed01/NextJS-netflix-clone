@@ -9,5 +9,9 @@ export const Wrapper = styled.div`
   width: 65%;
   margin-left: auto;
   margin-right: auto;
-  cursor: pointer;
+
+  :hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 `
