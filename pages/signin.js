@@ -2,6 +2,7 @@ import HeaderContainer from '../components/Header/HeaderContainer'
 import NavbarContainer from '../components/Header/NavbarContainer'
 import Logo from '../components/Header/Logo'
 import SignFormWrapper from '../components/SignIn/SignFormWrapper'
+import SignFormBase from '../components/SignIn/SignFormBase'
 
 export default function signin() {
   return (
@@ -9,7 +10,9 @@ export default function signin() {
       <HeaderContainer>
         <NavbarContainer />
         <Logo />
-        <SignFormWrapper></SignFormWrapper>
+        <SignFormWrapper>
+          <SignFormBase></SignFormBase>
+        </SignFormWrapper>
       </HeaderContainer>
     </>
   )
