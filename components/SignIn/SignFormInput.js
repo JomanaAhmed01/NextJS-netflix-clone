@@ -12,6 +12,10 @@ export default function SignFormInput({ children, ...restProps }) {
 export const Wrapper = styled.div`
   width: 100%;
   border: none;
+
+  @media (max-width: 740px) {
+    width: 105%;
+  }
 `
 
 export const Input = styled.input`
