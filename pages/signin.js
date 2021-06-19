@@ -5,6 +5,7 @@ import SignFormWrapper from '../components/SignIn/SignFormWrapper'
 import SignFormBase from '../components/SignIn/SignFormBase'
 import SignFormTitle from '../components/SignIn/SignFormTitle'
 import SignFormInput from '../components/SignIn/SignFormInput'
+import SignFormBtn from '../components/SignIn/SignFormBtn'
 
 export default function signin() {
   return (
@@ -17,6 +18,7 @@ export default function signin() {
             <SignFormTitle>Sign In</SignFormTitle>
             <SignFormInput type="text" placeholder="Email address" />
             <SignFormInput type="password" placeholder="Password" />
+            <SignFormBtn>Sign In</SignFormBtn>
           </SignFormBase>
         </SignFormWrapper>
       </HeaderContainer>
