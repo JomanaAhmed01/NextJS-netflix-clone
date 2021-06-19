@@ -8,6 +8,8 @@ import SignFormInput from '../components/SignIn/SignFormInput'
 import SignFormBtn from '../components/SignIn/SignFormBtn'
 import SignFormText from '../components/SignIn/SignFormText'
 import SignFormLink from '../components/SignIn/SignFormLink'
+import SignFormCaptcha from '../components/SignIn/SignFormCaptcha'
+import FooterCompound from '../compounds/FooterCompound'
 
 export default function signin() {
   return (
@@ -22,10 +24,16 @@ export default function signin() {
             <SignFormInput type="password" placeholder="Password" />
             <SignFormBtn>Sign In</SignFormBtn>
             <SignFormText>New to Netflix?</SignFormText>
-            <SignFormLink href='#'>Sign up now.</SignFormLink>
+            <SignFormLink href="#">Sign up now.</SignFormLink>
+            <SignFormCaptcha>
+              This page is protected by Google reCAPTCHA to ensure you are not a
+              bot.
+            </SignFormCaptcha>
           </SignFormBase>
         </SignFormWrapper>
       </HeaderContainer>
+
+      <FooterCompound />
     </>
   )
 }
