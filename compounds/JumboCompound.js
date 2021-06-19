@@ -59,6 +59,22 @@ export default function JumboCompound() {
         </JumboItem>
 
         <Separator />
+
+        <JumboItem>
+          <JumboTextWrapper>
+            <JumboTitle width="100%">Create profiles for kids.</JumboTitle>
+            <JumboSubtitle width="100%">
+              Send kids on adventures with their favorite characters in a space
+              made just for them—free with your membership.
+            </JumboSubtitle>
+          </JumboTextWrapper>
+
+          <JumboImageWrapper>
+            <JumboImage src="/images/misc/home-kids.png" width="100%" />
+          </JumboImageWrapper>
+        </JumboItem>
+
+        <Separator />
       </JumboWrapper>
     </>
   )
