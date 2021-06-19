@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export default function SignFormBtn({ children, ...restProps }) {
+export default function SignFormText({ children, ...restProps }) {
   return <Wrapper {...restProps}>{children}</Wrapper>
 }
 

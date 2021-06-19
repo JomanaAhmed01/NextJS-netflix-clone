@@ -7,6 +7,7 @@ import SignFormTitle from '../components/SignIn/SignFormTitle'
 import SignFormInput from '../components/SignIn/SignFormInput'
 import SignFormBtn from '../components/SignIn/SignFormBtn'
 import SignFormText from '../components/SignIn/SignFormText'
+import SignFormLink from '../components/SignIn/SignFormLink'
 
 export default function signin() {
   return (
@@ -21,6 +22,7 @@ export default function signin() {
             <SignFormInput type="password" placeholder="Password" />
             <SignFormBtn>Sign In</SignFormBtn>
             <SignFormText>New to Netflix?</SignFormText>
+            <SignFormLink href='#'>Sign up now.</SignFormLink>
           </SignFormBase>
         </SignFormWrapper>
       </HeaderContainer>
