@@ -24,7 +24,7 @@ export default function signin() {
             <SignFormInput type="password" placeholder="Password" />
             <SignFormBtn>Sign In</SignFormBtn>
             <SignFormText>New to Netflix?</SignFormText>
-            <SignFormLink href="#">Sign up now.</SignFormLink>
+            <SignFormLink href="/signup">Sign up now.</SignFormLink>
             <SignFormCaptcha>
               This page is protected by Google reCAPTCHA to ensure you are not a
               bot.

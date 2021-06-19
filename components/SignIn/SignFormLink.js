@@ -2,14 +2,11 @@ import styled from "styled-components"
 
 export default function SignFormLink({ children, ...restProps }) {
   return (
-    <Wrapper {...restProps}>
-      {children}
-      <Link {...restProps}></Link>
-    </Wrapper>
+      <Link {...restProps}>{children}</Link>
   )
 }
 
-export const Wrapper = styled.div`
+export const Link = styled.a`
   display: inline-block;
   margin-top: 40px;
   color: #ffffff;
@@ -23,5 +20,3 @@ export const Wrapper = styled.div`
     margin-top: 40px;
   }
 `
-
-export const Link = styled.a``
