@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export default function SigninBtn({ children, ...restProps }) {
-  return <SignInButton href='#' {...restProps}>{children}Sign In</SignInButton>
+  return <SignInButton href='/signin' {...restProps}>{children}Sign In</SignInButton>
 }
 
 export const SignInButton = styled.a`
