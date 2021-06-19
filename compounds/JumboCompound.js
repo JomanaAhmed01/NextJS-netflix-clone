@@ -30,10 +30,10 @@ export default function JumboCompound() {
         <JumboItem>
           <JumboTextWrapper>
             <JumboTitle width="100%">
-              Download your programmes to watch on the go.
+              Download your shows to watch offline.
             </JumboTitle>
             <JumboSubtitle width="100%">
-              Save your data and watch all your favourites offline.
+              Save your favorites easily and always have something to watch.
             </JumboSubtitle>
           </JumboTextWrapper>
 
