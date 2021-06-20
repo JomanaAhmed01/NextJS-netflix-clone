@@ -8,7 +8,7 @@ export default function SignFormLink({ children, ...restProps }) {
 
 export const Link = styled.a`
   display: inline-block;
-  margin-top: 40px;
+  margin-top: 10px;
   color: #ffffff;
   cursor: pointer;
 

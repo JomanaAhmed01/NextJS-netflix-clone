@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
   color: #757575;
   display: inline-block;
   margin-right: 7px;
-  margin-top: 40px;
 
   @media (max-width: 740px) {
     margin-top: 40px;
