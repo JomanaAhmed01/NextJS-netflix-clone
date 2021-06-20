@@ -15,8 +15,4 @@ export const Link = styled.a`
   :hover {
     text-decoration: underline;
   }
-
-  @media (max-width: 740px) {
-    margin-top: 40px;
-  }
 `

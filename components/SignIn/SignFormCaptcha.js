@@ -10,7 +10,6 @@ export const ReCaptcha = styled.p`
   width: 280px;
 
   @media (max-width: 740px) {
-    margin-top: 80px;
     width: initial;
   }
 `
