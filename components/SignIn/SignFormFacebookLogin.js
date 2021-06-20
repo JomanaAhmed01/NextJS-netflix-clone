@@ -22,6 +22,7 @@ export const Wrapper = styled.div`
 export const Link = styled.a`
   color: #737373;
   font-size: 14px;
+  cursor: pointer;
 `
 
 export const FacebookIcon = styled(SocialFacebook)`
