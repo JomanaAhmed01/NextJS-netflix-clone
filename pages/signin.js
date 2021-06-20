@@ -7,6 +7,7 @@ import SignFormTitle from "../components/SignIn/SignFormTitle"
 import SignFormInput from "../components/SignIn/SignFormInput"
 import SignFormBtn from "../components/SignIn/SignFormBtn"
 import SignFormCheckbox from "../components/SignIn/SignFormCheckbox"
+import SignFormFacebookLogin from "../components/SignIn/SignFormFacebookLogin"
 import SignFormText from "../components/SignIn/SignFormText"
 import SignFormLink from "../components/SignIn/SignFormLink"
 import SignFormCaptcha from "../components/SignIn/SignFormCaptcha"
@@ -25,6 +26,7 @@ export default function signin() {
             <SignFormInput type="password" placeholder="Password" />
             <SignFormBtn>Sign In</SignFormBtn>
             <SignFormCheckbox type="checkbox" label="Remember me" />
+            <SignFormFacebookLogin />
             <SignFormText>New to Netflix?</SignFormText>
             <SignFormLink href="/signup">Sign up now.</SignFormLink>
             <SignFormCaptcha>
