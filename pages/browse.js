@@ -1,6 +1,15 @@
 import styled from "styled-components"
+import { useState } from "react"
+import { filmsData } from "../data/FilmsData"
+import { seriesData } from "../data/SeriesData"
+import FooterCompound from '../compounds/FooterCompound'
 
 export default function browse() {
+  const [activeMovie, setActiveMovie] = useState("")
+  const [activeCategory, setActiveCategory] = useState(filmsData)
+
+  console.log("filmsData", filmsData)
+
   return (
     <>
       <BrowseWrapper>
@@ -8,12 +17,102 @@ export default function browse() {
           <BrowseNavbar>
             <BrowseLogo src="/images/misc/logo.svg" />
             <BrowseNavbarText>
-              <BrowseFilms>Films</BrowseFilms>
-              <BrowseSeries>Series</BrowseSeries>
+              <BrowseFilms onClick={() => setActiveCategory(filmsData)}>
+                Films
+              </BrowseFilms>
+              <BrowseSeries onClick={() => setActiveCategory(seriesData)}>
+                Series
+              </BrowseSeries>
             </BrowseNavbarText>
           </BrowseNavbar>
+
+          <BrowseHeader>
+            <BrowseTitle>Watch the Irish Man</BrowseTitle>
+            <BrowseSubtitle>
+              Hit man Frank Sheeran looks back at the secrets he kept as a loyal
+              member of the Bufalino crime family in this acclaimed film from
+              Martin Scorsese.
+            </BrowseSubtitle>
+            <BrowsePlayButton>Play</BrowsePlayButton>
+          </BrowseHeader>
         </BrowseFirstPart>
+
+        <BrowseMovies>
+          <BrowseDrama>
+            <BrowseDramaTitle>
+              {activeCategory === filmsData ? "Drama" : "Documentaries"}
+            </BrowseDramaTitle>
+            <BrowseDramaMovies>
+              {activeCategory.map((item) =>
+                item.genre === "drama" || item.genre === "documentaries" ? (
+                  <BrowseDramaImage
+                    src={item.smallImage}
+                    onClick={() => setActiveMovie(item.name)}
+                  />
+                ) : null
+              )}
+            </BrowseDramaMovies>
+
+            <BrowseDramaTitle>
+              {activeCategory === filmsData ? "Thriller" : "Comedies"}
+            </BrowseDramaTitle>
+            <BrowseDramaMovies>
+              {activeCategory.map((item) =>
+                item.genre === "thriller" || item.genre === "comedies" ? (
+                  <BrowseDramaImage
+                    src={item.smallImage}
+                    onClick={() => setActiveMovie(item.name)}
+                  />
+                ) : null
+              )}
+            </BrowseDramaMovies>
+
+            <BrowseDramaTitle>
+              {activeCategory === filmsData ? "Children" : "Children"}
+            </BrowseDramaTitle>
+            <BrowseDramaMovies>
+              {activeCategory.map((item) =>
+                item.genre === "children" || item.genre === "children" ? (
+                  <BrowseDramaImage
+                    src={item.smallImage}
+                    onClick={() => setActiveMovie(item.name)}
+                  />
+                ) : null
+              )}
+            </BrowseDramaMovies>
+
+            <BrowseDramaTitle>
+              {activeCategory === filmsData ? "Suspense" : "Crime"}
+            </BrowseDramaTitle>
+            <BrowseDramaMovies>
+              {activeCategory.map((item) =>
+                item.genre === "suspense" || item.genre === "crime" ? (
+                  <BrowseDramaImage
+                    src={item.smallImage}
+                    onClick={() => setActiveMovie(item.name)}
+                  />
+                ) : null
+              )}
+            </BrowseDramaMovies>
+
+            <BrowseDramaTitle>
+              {activeCategory === filmsData ? "Romance" : "Feel-Good"}
+            </BrowseDramaTitle>
+            <BrowseDramaMovies>
+              {activeCategory.map((item) =>
+                item.genre === "romance" || item.genre === "feel-good" ? (
+                  <BrowseDramaImage
+                    src={item.smallImage}
+                    onClick={() => setActiveMovie(item.name)}
+                  />
+                ) : null
+              )}
+            </BrowseDramaMovies>
+          </BrowseDrama>
+        </BrowseMovies>
       </BrowseWrapper>
+
+      <FooterCompound />
     </>
   )
 }
@@ -74,6 +173,128 @@ export const BrowseSeries = styled.a`
     font-size: 16px;
   }
 `
+
+export const BrowseHeader = styled.div`
+  padding-left: 50px;
+  margin-top: -10px;
+  width: 100%;
+
+  @media screen and (max-width: 550px) {
+    padding-left: 17px;
+  }
+`
+
+export const BrowseTitle = styled.p`
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: normal;
+  text-shadow: rgb(0 0 0 / 45%) 2px 2px 4px;
+  font-family: "Roboto", sans-serif;
+
+  @media screen and (max-width: 550px) {
+    font-size: 30px;
+  }
+`
+
+export const BrowseSubtitle = styled.p`
+  color: #ffffff;
+  font-size: 22px;
+  width: 630px;
+  text-shadow: rgb(0 0 0 / 45%) 2px 2px 4px;
+  margin-top: -35px;
+  font-family: "Roboto", sans-serif;
+
+  @media screen and (max-width: 768px) {
+    width: 95%;
+  }
+
+  @media screen and (max-width: 550px) {
+    margin-top: -15px;
+    font-size: 18px;
+  }
+`
+
+export const BrowsePlayButton = styled.button`
+  box-shadow: rgb(0 0 0 / 35%) 0px 0.6vw 1vw -0.4vw;
+  background-color: rgb(230, 230, 230);
+  border-width: 0px;
+  padding: 10px 35px;
+  border-radius: 5px;
+  max-width: 130px;
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 200px;
+  cursor: pointer;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  transition: all 0.4s ease 0s;
+  outline: 0px;
+
+  :hover {
+    background-color: #ff1a1a;
+    color: #ffffff;
+  }
+
+  @media screen and (max-width: 550px) {
+    margin-top: 10px;
+  }
+`
+
+export const BrowseMovies = styled.div`
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-align: center;
+  width: 100%;
+
+  @media screen and (max-width: 1105px) {
+    padding-left: 120px;
+  }
+
+  @media screen and (max-width: 650px) {
+    padding-left: 50px;
+  }
+`
+
+export const BrowseDrama = styled.div`
+  margin-bottom: 50px;
+`
+
+export const BrowseDramaTitle = styled.p`
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+`
+
+export const BrowseDramaMovies = styled.div`
+  @media screen and (max-width: 650px) {
+    display: flex;
+    flex-direction: column;
+  }
+`
+
+export const BrowseDramaImage = styled.img`
+  width: 19%;
+  margin-right: 10px;
+
+  :hover {
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: 1105px) {
+    width: 17%;
+  }
+
+  @media screen and (max-width: 650px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+`
+
+export const BrowseDramaFightClub = styled.div``
 
 /*import React, { useState } from "react"
 import Logo from "../components/Header/Logo.js"
