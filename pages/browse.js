@@ -1,3 +1,11 @@
+export default function browse() {
+  return (
+    <>
+      gvgggggggggggggggggggggggg
+    </>
+  )
+}
+
 /*import React, { useState } from "react"
 import Logo from "../components/Header/Logo.js"
 import FooterColumn from "../components/Footer/FooterColumn"
