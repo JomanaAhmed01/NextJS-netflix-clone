@@ -4,7 +4,15 @@ export default function browse() {
   return (
     <>
       <BrowseWrapper>
-        <BrowseFirstPart></BrowseFirstPart>
+        <BrowseFirstPart>
+          <BrowseNavbar>
+            <BrowseLogo src="/images/misc/logo.svg" />
+            <BrowseNavbarText>
+              <BrowseFilms>Films</BrowseFilms>
+              <BrowseSeries>Series</BrowseSeries>
+            </BrowseNavbarText>
+          </BrowseNavbar>
+        </BrowseFirstPart>
       </BrowseWrapper>
     </>
   )
@@ -15,6 +23,56 @@ export const BrowseWrapper = styled.div``
 export const BrowseFirstPart = styled.div`
   background: url(/images/misc/irishman.jpg) center top / cover no-repeat;
   padding-top: 30px;
+`
+
+export const BrowseNavbar = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  padding-bottom: 130px;
+
+  @media screen and (max-width: 550px) {
+    margin-left: 20px;
+    margin-top: -12px;
+  }
+`
+
+export const BrowseLogo = styled.img`
+  width: 108px;
+  height: 32px;
+  margin-right: 30px;
+
+  @media screen and (max-width: 550px) {
+    margin-right: 20px;
+  }
+`
+
+export const BrowseNavbarText = styled.div``
+
+export const BrowseFilms = styled.a`
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 17px;
+  margin-right: 30px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+
+  @media screen and (max-width: 550px) {
+    font-size: 16px;
+    margin-right: 35px;
+  }
+`
+
+export const BrowseSeries = styled.a`
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+
+  @media screen and (max-width: 550px) {
+    font-size: 16px;
+  }
 `
 
 /*import React, { useState } from "react"
