@@ -7,8 +7,15 @@ import FooterCompound from "../compounds/FooterCompound"
 export default function browse() {
   const [activeMovie, setActiveMovie] = useState("")
   const [activeCategory, setActiveCategory] = useState(filmsData)
+  const [showVideo, setShowVideo] = useState(false)
 
   console.log("filmsData", filmsData)
+
+  function showVideoTrailer() {
+    if (showVideo === false) {
+      setShowVideo(true)
+    }
+  }
 
   return (
     <>
@@ -28,6 +35,12 @@ export default function browse() {
             </BrowseNavbarText>
           </BrowseNavbar>
 
+          {showVideo === true ? (
+            <BrowseVideoWrapper className="video-wrapper">
+              <Video className="video" src="/videos/video.mp4" controls></Video>
+            </BrowseVideoWrapper>
+          ) : null}
+
           <BrowseHeader>
             <BrowseTitle>Watch the Irish Man</BrowseTitle>
             <BrowseSubtitle>
@@ -35,7 +48,7 @@ export default function browse() {
               member of the Bufalino crime family in this acclaimed film from
               Martin Scorsese.
             </BrowseSubtitle>
-            <BrowsePlayButton>Play</BrowsePlayButton>
+            <BrowsePlayButton onClick={showVideoTrailer}>Play</BrowsePlayButton>
           </BrowseHeader>
         </BrowseFirstPart>
 
@@ -299,6 +312,31 @@ export const BrowseDramaImage = styled.img`
 `
 
 export const BrowseDramaFightClub = styled.div``
+
+export const BrowseVideoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+`
+
+export const Video = styled.video`
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  z-index: 9997;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+`
 
 /*import React, { useState } from "react"
 import Logo from "../components/Header/Logo.js"
