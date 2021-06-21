@@ -25,7 +25,7 @@ export default function signup() {
             <SignFormInput type="password" placeholder="Password" />
             <SignFormBtn>Sign Up</SignFormBtn>
             <SignFormText>Already a user?</SignFormText>
-            <SignFormLink href="/signup">Sign in now.</SignFormLink>
+            <SignFormLink href="/signin">Sign in now.</SignFormLink>
             <SignFormCaptcha>
               This page is protected by Google reCAPTCHA to ensure you are not a
               bot.
