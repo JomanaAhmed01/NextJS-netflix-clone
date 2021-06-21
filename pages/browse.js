@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { useState } from "react"
 import { filmsData } from "../data/FilmsData"
 import { seriesData } from "../data/SeriesData"
-import FooterCompound from '../compounds/FooterCompound'
+import FooterCompound from "../compounds/FooterCompound"
 
 export default function browse() {
   const [activeMovie, setActiveMovie] = useState("")
@@ -15,7 +15,9 @@ export default function browse() {
       <BrowseWrapper>
         <BrowseFirstPart>
           <BrowseNavbar>
-            <BrowseLogo src="/images/misc/logo.svg" />
+            <Link href="/">
+              <BrowseLogo src="/images/misc/logo.svg" />
+            </Link>
             <BrowseNavbarText>
               <BrowseFilms onClick={() => setActiveCategory(filmsData)}>
                 Films
@@ -135,6 +137,8 @@ export const BrowseNavbar = styled.div`
     margin-top: -12px;
   }
 `
+
+export const Link = styled.a``
 
 export const BrowseLogo = styled.img`
   width: 108px;
