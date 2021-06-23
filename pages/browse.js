@@ -68,20 +68,90 @@ export default function browse() {
               )}
             </BrowseDramaMovies>
 
-            <BrowseDramaTitle>
-              {activeCategory === filmsData ? "Thriller" : "Comedies"}
-            </BrowseDramaTitle>
-            <BrowseDramaMovies>
-              {activeCategory.map((item) =>
-                item.genre === "thriller" || item.genre === "comedies" ? (
-                  <BrowseDramaImage
-                    src={item.smallImage}
-                    onClick={() => setActiveMovie(item.name)}
-                  />
+            {activeCategory
+              .filter(
+                (item) =>
+                  item.genre === "drama" || item.genre === "documentaries"
+              )
+              .map((item) =>
+                item.name === activeMovie ? (
+                  <BrowseDramaFightClub className="browse-drama-fight-club">
+                    <BrowseDramaFightClubDesc itemName={item.name}>
+                      <BrowseDramaFightClubTitleAndIconWrapper className="browse-drama-fight-club-title-and-icon-wrapper">
+                        <BrowseDramaFightClubTitle className="browse-drama-fight-club-title">
+                          {item.title}
+                        </BrowseDramaFightClubTitle>
+                        <BrowseDramaFightClubCloseIconWrapper className="browse-drama-fight-club-close-icon-wrapper">
+                          <CloseIcon
+                            className="browse-drama-fight-club-close-icon"
+                            src="/images/icons/close.png"
+                            onClick={() => setActiveMovie("")}
+                          ></CloseIcon>
+                        </BrowseDramaFightClubCloseIconWrapper>
+                      </BrowseDramaFightClubTitleAndIconWrapper>
+                      <BrowseDramaFightClubSubtitle className="browse-drama-fight-club-subtitle">
+                        {item.subTitle}
+                      </BrowseDramaFightClubSubtitle>
+                      <BrowsePlayButton
+                        onClick={showVideoTrailer}
+                        className="browse-header-play-button"
+                      >
+                        Play
+                      </BrowsePlayButton>
+                    </BrowseDramaFightClubDesc>
+                  </BrowseDramaFightClub>
                 ) : null
               )}
-            </BrowseDramaMovies>
+            <BrowseDramaFightClub>
+              <BrowseDramaTitle>
+                {activeCategory === filmsData ? "Thriller" : "Comedies"}
+              </BrowseDramaTitle>
+              <BrowseDramaMovies>
+                {activeCategory.map((item) =>
+                  item.genre === "thriller" || item.genre === "comedies" ? (
+                    <BrowseDramaImage
+                      src={item.smallImage}
+                      onClick={() => setActiveMovie(item.name)}
+                    />
+                  ) : null
+                )}
+              </BrowseDramaMovies>
 
+              {activeCategory
+                .filter(
+                  (item) =>
+                    item.genre === "thriller" || item.genre === "comedies"
+                )
+                .map((item) =>
+                  item.name === activeMovie ? (
+                    <BrowseDramaFightClub className="browse-drama-fight-club">
+                      <BrowseDramaFightClubDesc itemName={item.name}>
+                        <BrowseDramaFightClubTitleAndIconWrapper className="browse-drama-fight-club-title-and-icon-wrapper">
+                          <BrowseDramaFightClubTitle className="browse-drama-fight-club-title">
+                            {item.title}
+                          </BrowseDramaFightClubTitle>
+                          <BrowseDramaFightClubCloseIconWrapper className="browse-drama-fight-club-close-icon-wrapper">
+                            <CloseIcon
+                              className="browse-drama-fight-club-close-icon"
+                              src="/images/icons/close.png"
+                              onClick={() => setActiveMovie("")}
+                            ></CloseIcon>
+                          </BrowseDramaFightClubCloseIconWrapper>
+                        </BrowseDramaFightClubTitleAndIconWrapper>
+                        <BrowseDramaFightClubSubtitle className="browse-drama-fight-club-subtitle">
+                          {item.subTitle}
+                        </BrowseDramaFightClubSubtitle>
+                        <BrowsePlayButton
+                          onClick={showVideoTrailer}
+                          className="browse-header-play-button"
+                        >
+                          Play
+                        </BrowsePlayButton>
+                      </BrowseDramaFightClubDesc>
+                    </BrowseDramaFightClub>
+                  ) : null
+                )}
+            </BrowseDramaFightClub>
             <BrowseDramaTitle>
               {activeCategory === filmsData ? "Children" : "Children"}
             </BrowseDramaTitle>
@@ -312,6 +382,52 @@ export const BrowseDramaImage = styled.img`
 `
 
 export const BrowseDramaFightClub = styled.div``
+
+export const BrowseDramaFightClubDesc = styled.div`
+  background: ${(props) =>
+    `url(/images/films/drama/${props.itemName}/large.jpg)`};
+  background-size: contain;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 50px;
+  height: 360px;
+`
+
+export const BrowseDramaFightClubTitleAndIconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
+export const BrowseDramaFightClubTitle = styled.p`
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+`
+
+export const BrowseDramaFightClubCloseIconWrapper = styled.div`
+  margin-right: 20px;
+  margin-top: -10px;
+`
+
+export const CloseIcon = styled.img`
+  filter: brightness(0) invert(1);
+  width: 24px;
+`
+
+export const BrowseDramaFightClubSubtitle = styled.p`
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  width: 500px;
+
+  @media screen and (max-width: 650px) {
+    width: 270px;
+  }
+`
 
 export const BrowseVideoWrapper = styled.div`
   display: flex;
