@@ -43,7 +43,7 @@ export const filmsData = [
     name: "night-crawler",
     title: "Night Crawler",
     genre: "thriller",
-    smallImage: "/images/films/thriller/nightcrawler/small.jpg",
+    smallImage: "/images/films/thriller/night-crawler/small.jpg",
     subTitle:
       "Louis Bloom, a petty thief, realises that he can make money by capturing photographs of criminal activities and starts resorting to extreme tactics to get them.",
   },

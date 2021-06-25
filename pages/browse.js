@@ -102,63 +102,66 @@ export default function browse() {
                   </BrowseDramaFightClub>
                 ) : null
               )}
-            <BrowseDramaFightClub>
-              <BrowseDramaTitle>
-                {activeCategory === filmsData ? "Thriller" : "Comedies"}
-              </BrowseDramaTitle>
-              <BrowseDramaMovies>
-                {activeCategory.map((item) =>
-                  item.genre === "thriller" || item.genre === "comedies" ? (
-                    <BrowseDramaImage
-                      src={item.smallImage}
-                      onClick={() => setActiveMovie(item.name)}
-                    />
-                  ) : null
-                )}
-              </BrowseDramaMovies>
+          </BrowseDrama>
 
-              {activeCategory
-                .filter(
-                  (item) =>
-                    item.genre === "thriller" || item.genre === "comedies"
-                )
-                .map((item) =>
-                  item.name === activeMovie ? (
-                    <BrowseDramaFightClub className="browse-drama-fight-club">
-                      <BrowseDramaFightClubDesc itemName={item.name}>
-                        <BrowseDramaFightClubTitleAndIconWrapper className="browse-drama-fight-club-title-and-icon-wrapper">
-                          <BrowseDramaFightClubTitle className="browse-drama-fight-club-title">
-                            {item.title}
-                          </BrowseDramaFightClubTitle>
-                          <BrowseDramaFightClubCloseIconWrapper className="browse-drama-fight-club-close-icon-wrapper">
-                            <CloseIcon
-                              className="browse-drama-fight-club-close-icon"
-                              src="/images/icons/close.png"
-                              onClick={() => setActiveMovie("")}
-                            ></CloseIcon>
-                          </BrowseDramaFightClubCloseIconWrapper>
-                        </BrowseDramaFightClubTitleAndIconWrapper>
-                        <BrowseDramaFightClubSubtitle className="browse-drama-fight-club-subtitle">
-                          {item.subTitle}
-                        </BrowseDramaFightClubSubtitle>
-                        <BrowsePlayButton
-                          onClick={showVideoTrailer}
-                          className="browse-header-play-button"
-                        >
-                          Play
-                        </BrowsePlayButton>
-                      </BrowseDramaFightClubDesc>
-                    </BrowseDramaFightClub>
-                  ) : null
-                )}
-            </BrowseDramaFightClub>
+          <BrowseThriller>
+            <BrowseDramaTitle>
+              {activeCategory === filmsData ? "Thriller" : "Comedies"}
+            </BrowseDramaTitle>
+            <BrowseDramaMovies>
+              {activeCategory.map((item) =>
+                item.genre === "thriller" || item.genre === "comedies" ? (
+                  <BrowseThrillerImage
+                    src={item.smallImage}
+                    onClick={() => setActiveMovie(item.name)}
+                  />
+                ) : null
+              )}
+            </BrowseDramaMovies>
+
+            {activeCategory
+              .filter(
+                (item) => item.genre === "thriller" || item.genre === "comedies"
+              )
+              .map((item) =>
+                item.name === activeMovie ? (
+                  <BrowseDramaFightClub className="browse-drama-fight-club">
+                    <BrowseThrillerDesc itemName={item.name}>
+                      <BrowseDramaFightClubTitleAndIconWrapper className="browse-drama-fight-club-title-and-icon-wrapper">
+                        <BrowseDramaFightClubTitle className="browse-drama-fight-club-title">
+                          {item.title}
+                        </BrowseDramaFightClubTitle>
+                        <BrowseDramaFightClubCloseIconWrapper className="browse-drama-fight-club-close-icon-wrapper">
+                          <CloseIcon
+                            className="browse-drama-fight-club-close-icon"
+                            src="/images/icons/close.png"
+                            onClick={() => setActiveMovie("")}
+                          ></CloseIcon>
+                        </BrowseDramaFightClubCloseIconWrapper>
+                      </BrowseDramaFightClubTitleAndIconWrapper>
+                      <BrowseDramaFightClubSubtitle className="browse-drama-fight-club-subtitle">
+                        {item.subTitle}
+                      </BrowseDramaFightClubSubtitle>
+                      <BrowsePlayButton
+                        onClick={showVideoTrailer}
+                        className="browse-header-play-button"
+                      >
+                        Play
+                      </BrowsePlayButton>
+                    </BrowseThrillerDesc>
+                  </BrowseDramaFightClub>
+                ) : null
+              )}
+          </BrowseThriller>
+
+          <BrowseChildren>
             <BrowseDramaTitle>
               {activeCategory === filmsData ? "Children" : "Children"}
             </BrowseDramaTitle>
             <BrowseDramaMovies>
               {activeCategory.map((item) =>
                 item.genre === "children" || item.genre === "children" ? (
-                  <BrowseDramaImage
+                  <BrowseChildrenImage
                     src={item.smallImage}
                     onClick={() => setActiveMovie(item.name)}
                   />
@@ -166,13 +169,49 @@ export default function browse() {
               )}
             </BrowseDramaMovies>
 
+            {activeCategory
+              .filter(
+                (item) => item.genre === "children" || item.genre === "children"
+              )
+              .map((item) =>
+                item.name === activeMovie ? (
+                  <BrowseDramaFightClub className="browse-drama-fight-club">
+                    <BrowseChildrenDesc itemName={item.name}>
+                      <BrowseDramaFightClubTitleAndIconWrapper className="browse-drama-fight-club-title-and-icon-wrapper">
+                        <BrowseDramaFightClubTitle className="browse-drama-fight-club-title">
+                          {item.title}
+                        </BrowseDramaFightClubTitle>
+                        <BrowseDramaFightClubCloseIconWrapper className="browse-drama-fight-club-close-icon-wrapper">
+                          <CloseIcon
+                            className="browse-drama-fight-club-close-icon"
+                            src="/images/icons/close.png"
+                            onClick={() => setActiveMovie("")}
+                          ></CloseIcon>
+                        </BrowseDramaFightClubCloseIconWrapper>
+                      </BrowseDramaFightClubTitleAndIconWrapper>
+                      <BrowseDramaFightClubSubtitle className="browse-drama-fight-club-subtitle">
+                        {item.subTitle}
+                      </BrowseDramaFightClubSubtitle>
+                      <BrowsePlayButton
+                        onClick={showVideoTrailer}
+                        className="browse-header-play-button"
+                      >
+                        Play
+                      </BrowsePlayButton>
+                    </BrowseChildrenDesc>
+                  </BrowseDramaFightClub>
+                ) : null
+              )}
+          </BrowseChildren>
+
+          <BrowseSuspense>
             <BrowseDramaTitle>
               {activeCategory === filmsData ? "Suspense" : "Crime"}
             </BrowseDramaTitle>
             <BrowseDramaMovies>
               {activeCategory.map((item) =>
                 item.genre === "suspense" || item.genre === "crime" ? (
-                  <BrowseDramaImage
+                  <BrowseSuspenseImage
                     src={item.smallImage}
                     onClick={() => setActiveMovie(item.name)}
                   />
@@ -180,20 +219,90 @@ export default function browse() {
               )}
             </BrowseDramaMovies>
 
+            {activeCategory
+              .filter(
+                (item) => item.genre === "suspense" || item.genre === "crime"
+              )
+              .map((item) =>
+                item.name === activeMovie ? (
+                  <BrowseDramaFightClub className="browse-drama-fight-club">
+                    <BrowseSuspenseDesc itemName={item.name}>
+                      <BrowseDramaFightClubTitleAndIconWrapper className="browse-drama-fight-club-title-and-icon-wrapper">
+                        <BrowseDramaFightClubTitle className="browse-drama-fight-club-title">
+                          {item.title}
+                        </BrowseDramaFightClubTitle>
+                        <BrowseDramaFightClubCloseIconWrapper className="browse-drama-fight-club-close-icon-wrapper">
+                          <CloseIcon
+                            className="browse-drama-fight-club-close-icon"
+                            src="/images/icons/close.png"
+                            onClick={() => setActiveMovie("")}
+                          ></CloseIcon>
+                        </BrowseDramaFightClubCloseIconWrapper>
+                      </BrowseDramaFightClubTitleAndIconWrapper>
+                      <BrowseDramaFightClubSubtitle className="browse-drama-fight-club-subtitle">
+                        {item.subTitle}
+                      </BrowseDramaFightClubSubtitle>
+                      <BrowsePlayButton
+                        onClick={showVideoTrailer}
+                        className="browse-header-play-button"
+                      >
+                        Play
+                      </BrowsePlayButton>
+                    </BrowseSuspenseDesc>
+                  </BrowseDramaFightClub>
+                ) : null
+              )}
+          </BrowseSuspense>
+
+          <BrowseRomance>
             <BrowseDramaTitle>
               {activeCategory === filmsData ? "Romance" : "Feel-Good"}
             </BrowseDramaTitle>
             <BrowseDramaMovies>
               {activeCategory.map((item) =>
                 item.genre === "romance" || item.genre === "feel-good" ? (
-                  <BrowseDramaImage
+                  <BrowseRomanceImage
                     src={item.smallImage}
                     onClick={() => setActiveMovie(item.name)}
                   />
                 ) : null
               )}
             </BrowseDramaMovies>
-          </BrowseDrama>
+
+            {activeCategory
+              .filter(
+                (item) => item.genre === "romance" || item.genre === "feel-good"
+              )
+              .map((item) =>
+                item.name === activeMovie ? (
+                  <BrowseDramaFightClub className="browse-drama-fight-club">
+                    <BrowseRomanceDesc itemName={item.name}>
+                      <BrowseDramaFightClubTitleAndIconWrapper className="browse-drama-fight-club-title-and-icon-wrapper">
+                        <BrowseDramaFightClubTitle className="browse-drama-fight-club-title">
+                          {item.title}
+                        </BrowseDramaFightClubTitle>
+                        <BrowseDramaFightClubCloseIconWrapper className="browse-drama-fight-club-close-icon-wrapper">
+                          <CloseIcon
+                            className="browse-drama-fight-club-close-icon"
+                            src="/images/icons/close.png"
+                            onClick={() => setActiveMovie("")}
+                          ></CloseIcon>
+                        </BrowseDramaFightClubCloseIconWrapper>
+                      </BrowseDramaFightClubTitleAndIconWrapper>
+                      <BrowseDramaFightClubSubtitle className="browse-drama-fight-club-subtitle">
+                        {item.subTitle}
+                      </BrowseDramaFightClubSubtitle>
+                      <BrowsePlayButton
+                        onClick={showVideoTrailer}
+                        className="browse-header-play-button"
+                      >
+                        Play
+                      </BrowsePlayButton>
+                    </BrowseRomanceDesc>
+                  </BrowseDramaFightClub>
+                ) : null
+              )}
+          </BrowseRomance>
         </BrowseMovies>
       </BrowseWrapper>
 
@@ -452,6 +561,138 @@ export const Video = styled.video`
   @media screen and (max-width: 768px) {
     width: 100%;
   }
+`
+
+export const BrowseThriller = styled.div`
+  margin-bottom: 50px;
+`
+
+export const BrowseThrillerImage = styled.img`
+  width: 19%;
+  margin-right: 10px;
+
+  :hover {
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: 1105px) {
+    width: 17%;
+  }
+
+  @media screen and (max-width: 650px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+`
+
+export const BrowseThrillerDesc = styled.div`
+  background: ${(props) =>
+    `url(/images/films/thriller/${props.itemName}/large.jpg)`};
+  background-size: contain;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 50px;
+  height: 360px;
+`
+
+export const BrowseChildren = styled.div`
+  margin-bottom: 50px;
+`
+
+export const BrowseChildrenImage = styled.img`
+  width: 19%;
+  margin-right: 10px;
+
+  :hover {
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: 1105px) {
+    width: 17%;
+  }
+
+  @media screen and (max-width: 650px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+`
+
+export const BrowseChildrenDesc = styled.div`
+  background: ${(props) =>
+    `url(/images/films/children/${props.itemName}/large.jpg)`};
+  background-size: contain;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 50px;
+  height: 360px;
+`
+
+export const BrowseSuspense = styled.div`
+  margin-bottom: 50px;
+`
+
+export const BrowseSuspenseImage = styled.img`
+  width: 19%;
+  margin-right: 10px;
+
+  :hover {
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: 1105px) {
+    width: 17%;
+  }
+
+  @media screen and (max-width: 650px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+`
+
+export const BrowseSuspenseDesc = styled.div`
+  background: ${(props) =>
+    `url(/images/films/suspense/${props.itemName}/large.jpg)`};
+  background-size: contain;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 50px;
+  height: 360px;
+`
+
+export const BrowseRomance = styled.div`
+  margin-bottom: 50px;
+`
+
+export const BrowseRomanceImage = styled.img`
+  width: 19%;
+  margin-right: 10px;
+
+  :hover {
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: 1105px) {
+    width: 17%;
+  }
+
+  @media screen and (max-width: 650px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+`
+
+export const BrowseRomanceDesc = styled.div`
+  background: ${(props) =>
+    `url(/images/films/romance/${props.itemName}/large.jpg)`};
+  background-size: contain;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 50px;
+  height: 360px;
 `
 
 /*import React, { useState } from "react"
