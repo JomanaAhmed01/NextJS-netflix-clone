@@ -1,12 +1,7 @@
 import styled from "styled-components"
 
 export default function AccordionHeader({ children, ...restProps }) {
-  return (
-    <Wrapper {...restProps}>
-      {children}
-      <Image src="./images/icons/close-slim.png" />
-    </Wrapper>
-  )
+  return <Wrapper {...restProps}>{children}</Wrapper>
 }
 
 export const Wrapper = styled.div`
@@ -37,12 +32,4 @@ export const Wrapper = styled.div`
     padding-bottom: 10px;
     font-size: 18px;
   }
-`
-
-export const Image = styled.img`
-  width: 23px;
-  filter: brightness(0) invert(1);
-  float: right;
-  margin-right: 30px;
-  cursor: pointer;
 `
