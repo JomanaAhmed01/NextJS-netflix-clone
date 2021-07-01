@@ -1,15 +1,15 @@
 import styled from "styled-components"
 import { useState } from "react"
-import { filmsData } from "../data/FilmsData"
-import { seriesData } from "../data/SeriesData"
+import { films } from "../Data/films"
+import { series } from "../Data/series"
 import FooterCompound from "../compounds/FooterCompound"
 
 export default function browse() {
   const [activeMovie, setActiveMovie] = useState("")
-  const [activeCategory, setActiveCategory] = useState(filmsData)
+  const [activeCategory, setActiveCategory] = useState(films)
   const [showVideo, setShowVideo] = useState(false)
 
-  console.log("filmsData", filmsData)
+  console.log("films", films)
 
   function showVideoTrailer() {
     if (showVideo === false) {
@@ -26,12 +26,12 @@ export default function browse() {
               <BrowseLogo src="/images/misc/logo.svg" />
             </Link>
             <BrowseNavbarText>
-              <BrowseFilms onClick={() => setActiveCategory(filmsData)}>
-                Films
-              </BrowseFilms>
-              <BrowseSeries onClick={() => setActiveCategory(seriesData)}>
-                Series
-              </BrowseSeries>
+              <Browsefilms onClick={() => setActiveCategory(films)}>
+                films
+              </Browsefilms>
+              <Browseseries onClick={() => setActiveCategory(series)}>
+                series
+              </Browseseries>
             </BrowseNavbarText>
           </BrowseNavbar>
 
@@ -55,7 +55,7 @@ export default function browse() {
         <BrowseMovies>
           <BrowseDrama>
             <BrowseDramaTitle>
-              {activeCategory === filmsData ? "Drama" : "Documentaries"}
+              {activeCategory === films ? "Drama" : "Documentaries"}
             </BrowseDramaTitle>
             <BrowseDramaMovies>
               {activeCategory.map((item) =>
@@ -76,7 +76,11 @@ export default function browse() {
               .map((item) =>
                 item.name === activeMovie ? (
                   <BrowseDramaFightClub className="browse-drama-fight-club">
-                    <BrowseDramaFightClubDesc itemName={item.name}>
+                    <BrowseDramaFightClubDesc
+                      itemFolder={item.folder}
+                      itemGenre={item.genre}
+                      itemName={item.name}
+                    >
                       <BrowseDramaFightClubTitleAndIconWrapper className="browse-drama-fight-club-title-and-icon-wrapper">
                         <BrowseDramaFightClubTitle className="browse-drama-fight-club-title">
                           {item.title}
@@ -106,7 +110,7 @@ export default function browse() {
 
           <BrowseThriller>
             <BrowseDramaTitle>
-              {activeCategory === filmsData ? "Thriller" : "Comedies"}
+              {activeCategory === films ? "Thriller" : "Comedies"}
             </BrowseDramaTitle>
             <BrowseDramaMovies>
               {activeCategory.map((item) =>
@@ -126,7 +130,11 @@ export default function browse() {
               .map((item) =>
                 item.name === activeMovie ? (
                   <BrowseDramaFightClub className="browse-drama-fight-club">
-                    <BrowseThrillerDesc itemName={item.name}>
+                    <BrowseThrillerDesc
+                      itemFolder={item.folder}
+                      itemGenre={item.genre}
+                      itemName={item.name}
+                    >
                       <BrowseDramaFightClubTitleAndIconWrapper className="browse-drama-fight-club-title-and-icon-wrapper">
                         <BrowseDramaFightClubTitle className="browse-drama-fight-club-title">
                           {item.title}
@@ -156,7 +164,7 @@ export default function browse() {
 
           <BrowseChildren>
             <BrowseDramaTitle>
-              {activeCategory === filmsData ? "Children" : "Children"}
+              {activeCategory === films ? "Children" : "Children"}
             </BrowseDramaTitle>
             <BrowseDramaMovies>
               {activeCategory.map((item) =>
@@ -176,7 +184,11 @@ export default function browse() {
               .map((item) =>
                 item.name === activeMovie ? (
                   <BrowseDramaFightClub className="browse-drama-fight-club">
-                    <BrowseChildrenDesc itemName={item.name}>
+                    <BrowseChildrenDesc
+                      itemFolder={item.folder}
+                      itemGenre={item.genre}
+                      itemName={item.name}
+                    >
                       <BrowseDramaFightClubTitleAndIconWrapper className="browse-drama-fight-club-title-and-icon-wrapper">
                         <BrowseDramaFightClubTitle className="browse-drama-fight-club-title">
                           {item.title}
@@ -206,7 +218,7 @@ export default function browse() {
 
           <BrowseSuspense>
             <BrowseDramaTitle>
-              {activeCategory === filmsData ? "Suspense" : "Crime"}
+              {activeCategory === films ? "Suspense" : "Crime"}
             </BrowseDramaTitle>
             <BrowseDramaMovies>
               {activeCategory.map((item) =>
@@ -226,7 +238,11 @@ export default function browse() {
               .map((item) =>
                 item.name === activeMovie ? (
                   <BrowseDramaFightClub className="browse-drama-fight-club">
-                    <BrowseSuspenseDesc itemName={item.name}>
+                    <BrowseSuspenseDesc
+                      itemFolder={item.folder}
+                      itemGenre={item.genre}
+                      itemName={item.name}
+                    >
                       <BrowseDramaFightClubTitleAndIconWrapper className="browse-drama-fight-club-title-and-icon-wrapper">
                         <BrowseDramaFightClubTitle className="browse-drama-fight-club-title">
                           {item.title}
@@ -256,7 +272,7 @@ export default function browse() {
 
           <BrowseRomance>
             <BrowseDramaTitle>
-              {activeCategory === filmsData ? "Romance" : "Feel-Good"}
+              {activeCategory === films ? "Romance" : "Feel-Good"}
             </BrowseDramaTitle>
             <BrowseDramaMovies>
               {activeCategory.map((item) =>
@@ -276,7 +292,11 @@ export default function browse() {
               .map((item) =>
                 item.name === activeMovie ? (
                   <BrowseDramaFightClub className="browse-drama-fight-club">
-                    <BrowseRomanceDesc itemName={item.name}>
+                    <BrowseRomanceDesc
+                      itemFolder={item.folder}
+                      itemGenre={item.genre}
+                      itemName={item.name}
+                    >
                       <BrowseDramaFightClubTitleAndIconWrapper className="browse-drama-fight-club-title-and-icon-wrapper">
                         <BrowseDramaFightClubTitle className="browse-drama-fight-club-title">
                           {item.title}
@@ -344,7 +364,7 @@ export const BrowseLogo = styled.img`
 
 export const BrowseNavbarText = styled.div``
 
-export const BrowseFilms = styled.a`
+export const Browsefilms = styled.a`
   text-decoration: none;
   color: #ffffff;
   font-size: 17px;
@@ -358,7 +378,7 @@ export const BrowseFilms = styled.a`
   }
 `
 
-export const BrowseSeries = styled.a`
+export const Browseseries = styled.a`
   text-decoration: none;
   color: #ffffff;
   font-size: 17px;
@@ -494,7 +514,7 @@ export const BrowseDramaFightClub = styled.div``
 
 export const BrowseDramaFightClubDesc = styled.div`
   background: ${(props) =>
-    `url(/images/films/drama/${props.itemName}/large.jpg)`};
+    `url(/images/${props.itemFolder}/${props.itemGenre}/${props.itemName}/large.jpg)`};
   background-size: contain;
   background-position-x: 100%;
   background-repeat: no-repeat;
@@ -587,7 +607,7 @@ export const BrowseThrillerImage = styled.img`
 
 export const BrowseThrillerDesc = styled.div`
   background: ${(props) =>
-    `url(/images/films/thriller/${props.itemName}/large.jpg)`};
+    `url(/images/${props.itemFolder}/${props.itemGenre}/${props.itemName}/large.jpg)`};
   background-size: contain;
   background-position-x: 100%;
   background-repeat: no-repeat;
@@ -620,7 +640,7 @@ export const BrowseChildrenImage = styled.img`
 
 export const BrowseChildrenDesc = styled.div`
   background: ${(props) =>
-    `url(/images/films/children/${props.itemName}/large.jpg)`};
+    `url(/images/${props.itemFolder}/${props.itemGenre}/${props.itemName}/large.jpg)`};
   background-size: contain;
   background-position-x: 100%;
   background-repeat: no-repeat;
@@ -653,7 +673,7 @@ export const BrowseSuspenseImage = styled.img`
 
 export const BrowseSuspenseDesc = styled.div`
   background: ${(props) =>
-    `url(/images/films/suspense/${props.itemName}/large.jpg)`};
+    `url(/images/${props.itemFolder}/${props.itemGenre}/${props.itemName}/large.jpg)`};
   background-size: contain;
   background-position-x: 100%;
   background-repeat: no-repeat;
@@ -686,7 +706,7 @@ export const BrowseRomanceImage = styled.img`
 
 export const BrowseRomanceDesc = styled.div`
   background: ${(props) =>
-    `url(/images/films/romance/${props.itemName}/large.jpg)`};
+    `url(/images/${props.itemFolder}/${props.itemGenre}/${props.itemName}/large.jpg)`};
   background-size: contain;
   background-position-x: 100%;
   background-repeat: no-repeat;
@@ -702,12 +722,12 @@ import FooterLink from "../components/Footer/FooterLink"
 import FooterRow from "../components/Footer/FooterRow"
 import FooterTitle from "../components/Footer/FooterTitle"
 import FooterWrapper from "../components/Footer/FooterWrapper"
-import { filmsData } from "../data/FilmsData"
-import { seriesData } from "../data/SeriesData"
+import { films } from "../data/films"
+import { series } from "../data/series"
 
 function Browse() {
   const [activeMovie, setActiveMovie] = useState("")
-  const [activeCategory, setActiveCategory] = useState(filmsData)
+  const [activeCategory, setActiveCategory] = useState(films)
   const [showVideo, setShowVideo] = useState(false)
 
   function showVideoTrailer() {
@@ -716,7 +736,7 @@ function Browse() {
     }
   }
 
-  console.log("filmsData", filmsData)
+  console.log("films", films)
 
   return (
     <div className="browse-wrapper">
@@ -725,16 +745,16 @@ function Browse() {
           <Logo className="browse-logo" />
           <div className="browse-navbar-text">
             <a
-              onClick={() => setActiveCategory(filmsData)}
+              onClick={() => setActiveCategory(films)}
               className="browse-films"
             >
-              Films
+              films
             </a>
             <a
-              onClick={() => setActiveCategory(seriesData)}
+              onClick={() => setActiveCategory(series)}
               className="browse-series"
             >
-              Series
+              series
             </a>
           </div>
         </div>
@@ -763,7 +783,7 @@ function Browse() {
       <div className="browse-movies">
         <div className="browse-drama">
           <p className="browse-drama-title">
-            {activeCategory === filmsData ? "Drama" : "Documentaries"}
+            {activeCategory === films ? "Drama" : "Documentaries"}
           </p>
           <div className="browse-drama-movies">
             {activeCategory.map((item) =>
@@ -814,7 +834,7 @@ function Browse() {
 
         <div className="browse-thriller">
           <p className="browse-thriller-title">
-            {activeCategory === filmsData ? "Thriller" : "Comedies"}
+            {activeCategory === films ? "Thriller" : "Comedies"}
           </p>
           <div className="browse-thriller-movies">
             {activeCategory.map((item) =>
@@ -910,7 +930,7 @@ function Browse() {
 
         <div className="browse-suspense">
           <p className="browse-suspense-title">
-            {activeCategory === filmsData ? "Suspense" : "Crime"}
+            {activeCategory === films ? "Suspense" : "Crime"}
           </p>
           <div className="browse-suspense-movies">
             {activeCategory.map((item) =>
@@ -959,7 +979,7 @@ function Browse() {
 
         <div className="browse-romance">
           <p className="browse-romance-title">
-            {activeCategory === filmsData ? "Romance" : "Feel-Good"}
+            {activeCategory === films ? "Romance" : "Feel-Good"}
           </p>
           <div className="browse-romance-movies">
             {activeCategory.map((item) =>
