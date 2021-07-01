@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export default function AccordionBody({ children, ...restProps }) {
-  let FAQState = "jajajaj"
+  let FAQState = "open"
 
   if (FAQState === "open") {
     return <Wrapper {...restProps}>{children}</Wrapper>
