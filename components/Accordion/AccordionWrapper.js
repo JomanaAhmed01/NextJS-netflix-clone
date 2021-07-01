@@ -6,4 +6,6 @@ export default function AccordionWrapper({ children, ...restProps }) {
 
 export const Wrapper = styled.div`
   margin-bottom: 70px;
+  margin-left: 10px;
+  margin-right: 10px;
 `

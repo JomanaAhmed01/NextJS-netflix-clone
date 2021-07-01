@@ -44,6 +44,7 @@ export const Link = styled.a`
   font-size: 14px;
   color: #b3b3b3;
   margin-right: -18px;
+  margin-top: 2px;
 
   :hover {
     text-decoration: underline;

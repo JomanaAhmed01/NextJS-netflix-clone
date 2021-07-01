@@ -8,4 +8,5 @@ export const Wrapper = styled.div`
   color: #757575;
   display: inline-block;
   margin-right: 7px;
+  font-size: 15px;
 `

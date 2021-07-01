@@ -11,6 +11,7 @@ export const Link = styled.a`
   margin-top: 10px;
   color: #ffffff;
   cursor: pointer;
+  font-size: 15px;
 
   :hover {
     text-decoration: underline;
