@@ -27,10 +27,10 @@ export default function browse() {
             </Link>
             <BrowseNavbarText>
               <Browsefilms onClick={() => setActiveCategory(films)}>
-                films
+                Films
               </Browsefilms>
               <Browseseries onClick={() => setActiveCategory(series)}>
-                series
+                Series
               </Browseseries>
             </BrowseNavbarText>
           </BrowseNavbar>
