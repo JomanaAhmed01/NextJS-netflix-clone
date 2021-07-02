@@ -21,6 +21,6 @@ export const EmailInput = styled.input`
 
   @media (max-width: 950px) {
     margin-bottom: 20px;
-    width: 75%;
+    width: 100%;
   }
 `
