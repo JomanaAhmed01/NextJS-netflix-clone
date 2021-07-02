@@ -17,5 +17,6 @@ export const Subtitle = styled.p`
     width: initial;
     font-size: 20px;
     text-align: center;
+    width: 100%;
   }
 `
