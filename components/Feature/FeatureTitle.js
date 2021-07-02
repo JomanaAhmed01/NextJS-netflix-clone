@@ -15,7 +15,7 @@ export const Title = styled.h1`
   cursor: context-menu;
 
   @media screen and (max-width: 950px) {
-    width: 80%;
+    width: 90%;
   }
 
   @media screen and (max-width: 550px) {

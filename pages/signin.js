@@ -12,6 +12,7 @@ import SignFormText from "../components/SignIn/SignFormText"
 import SignFormLink from "../components/SignIn/SignFormLink"
 import SignFormCaptcha from "../components/SignIn/SignFormCaptcha"
 import FooterCompound from "../compounds/FooterCompound"
+import Link from "next/link"
 
 export default function signin() {
   return (
@@ -28,7 +29,7 @@ export default function signin() {
             <SignFormCheckbox type="checkbox" label="Remember me" />
             <SignFormFacebookLogin />
             <SignFormText>New to Netflix?</SignFormText>
-            <SignFormLink href="/signup">Sign up now.</SignFormLink>
+            <Link href='/signup'><SignFormLink>Sign up now.</SignFormLink></Link>
             <SignFormCaptcha>
               This page is protected by Google reCAPTCHA to ensure you are not a
               bot.

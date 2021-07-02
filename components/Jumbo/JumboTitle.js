@@ -18,6 +18,6 @@ export const Title = styled.h1`
 
   @media (max-width: 550px) {
     width: initial;
-    font-size: 30px;
+    font-size: 25px;
   }
 `

@@ -1,7 +1,12 @@
 import styled from "styled-components"
+import Link from "next/link"
 
 export default function SigninBtn({ children, ...restProps }) {
-  return <SignInButton href='/signin' {...restProps}>{children}Sign In</SignInButton>
+  return (
+    <Link href="signin">
+      <SignInButton {...restProps}>{children}Sign In</SignInButton>
+    </Link>
+  )
 }
 
 export const SignInButton = styled.a`
@@ -13,9 +18,10 @@ export const SignInButton = styled.a`
   padding-top: 7px;
   padding-bottom: 7px;
   border-radius: 3px;
-  margin-top: 20px;
+  margin-top: 16px;
   margin-left: auto;
   margin-right: 35px;
+  cursor: pointer; 
 
   @media screen and (max-width: 550px) {
     padding-right: 10px;

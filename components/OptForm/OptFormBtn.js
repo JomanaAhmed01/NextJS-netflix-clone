@@ -1,7 +1,12 @@
 import styled from "styled-components"
+import Link from "next/link"
 
 export default function OptFormBtn({ children, ...restProps }) {
-  return <Button href='/browse' {...restProps}>{children}Get Started &gt;</Button>
+  return (
+    <Link href="/browse">
+      <Button {...restProps}>{children}Get Started &gt;</Button>
+    </Link>
+  )
 }
 
 export const Button = styled.a`
@@ -10,6 +15,7 @@ export const Button = styled.a`
   color: #ffffff;
   font-size: 25px;
   padding: 13px 40px;
+  cursor: pointer;
 
   @media (max-width: 950px) {
     width: max-content;

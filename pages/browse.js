@@ -3,6 +3,7 @@ import { useState } from "react"
 import { films } from "../Data/films"
 import { series } from "../Data/series"
 import FooterCompound from "../compounds/FooterCompound"
+import Link from "next/link"
 
 export default function browse() {
   const [activeMovie, setActiveMovie] = useState("")
@@ -27,10 +28,10 @@ export default function browse() {
             </Link>
             <BrowseNavbarText>
               <Browsefilms onClick={() => setActiveCategory(films)}>
-                films
+                Films
               </Browsefilms>
               <Browseseries onClick={() => setActiveCategory(series)}>
-                series
+                Series
               </Browseseries>
             </BrowseNavbarText>
           </BrowseNavbar>
@@ -350,12 +351,11 @@ export const BrowseNavbar = styled.div`
   }
 `
 
-export const Link = styled.a``
-
 export const BrowseLogo = styled.img`
   width: 108px;
   height: 32px;
   margin-right: 30px;
+  cursor: pointer;
 
   @media screen and (max-width: 550px) {
     margin-right: 20px;
@@ -498,6 +498,7 @@ export const BrowseDramaImage = styled.img`
 
   :hover {
     transform: scale(1.2);
+    cursor: pointer;
   }
 
   @media screen and (max-width: 1105px) {
@@ -544,6 +545,7 @@ export const BrowseDramaFightClubCloseIconWrapper = styled.div`
 export const CloseIcon = styled.img`
   filter: brightness(0) invert(1);
   width: 24px;
+  cursor: pointer;
 `
 
 export const BrowseDramaFightClubSubtitle = styled.p`
@@ -593,6 +595,7 @@ export const BrowseThrillerImage = styled.img`
 
   :hover {
     transform: scale(1.2);
+    cursor: pointer;
   }
 
   @media screen and (max-width: 1105px) {
@@ -626,6 +629,7 @@ export const BrowseChildrenImage = styled.img`
 
   :hover {
     transform: scale(1.2);
+    cursor: pointer;
   }
 
   @media screen and (max-width: 1105px) {
@@ -659,6 +663,7 @@ export const BrowseSuspenseImage = styled.img`
 
   :hover {
     transform: scale(1.2);
+    cursor: pointer;
   }
 
   @media screen and (max-width: 1105px) {
@@ -692,6 +697,7 @@ export const BrowseRomanceImage = styled.img`
 
   :hover {
     transform: scale(1.2);
+    cursor: pointer;
   }
 
   @media screen and (max-width: 1105px) {
