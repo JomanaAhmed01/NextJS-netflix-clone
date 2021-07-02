@@ -18,7 +18,7 @@ export const SignInButton = styled.a`
   padding-top: 7px;
   padding-bottom: 7px;
   border-radius: 3px;
-  margin-top: 20px;
+  margin-top: 16px;
   margin-left: auto;
   margin-right: 35px;
   cursor: pointer; 
