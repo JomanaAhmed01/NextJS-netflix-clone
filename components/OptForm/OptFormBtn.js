@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export default function OptFormBtn({ children, ...restProps }) {
-  return <Button href='#' {...restProps}>{children}GET STARTED</Button>
+  return <Button href='/browse' {...restProps}>{children}Get Started &gt;</Button>
 }
 
 export const Button = styled.a`

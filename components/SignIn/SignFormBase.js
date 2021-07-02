@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   width: 450px;
   padding: 50px;
   border-radius: 5px;
-  height: 580px;
+  height: 600px;
   opacity: 0.75;
 
   @media (max-width: 740px) {

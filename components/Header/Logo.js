@@ -2,11 +2,14 @@ import styled from "styled-components"
 
 export default function Logo({ children, ...restProps }) {
   return (
-    <Image src="/images/misc/logo.svg" {...restProps}>
+    <Link href="/" {...restProps}>
       {children}
-    </Image>
+      <Image src="/images/misc/logo.svg" {...restProps}></Image>
+    </Link>
   )
 }
+
+export const Link = styled.a``
 
 export const Image = styled.img`
   margin-left: 55px;
