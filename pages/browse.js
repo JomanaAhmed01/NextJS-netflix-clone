@@ -3,6 +3,7 @@ import { useState } from "react"
 import { films } from "../Data/films"
 import { series } from "../Data/series"
 import FooterCompound from "../compounds/FooterCompound"
+import Link from "next/link"
 
 export default function browse() {
   const [activeMovie, setActiveMovie] = useState("")
@@ -350,12 +351,11 @@ export const BrowseNavbar = styled.div`
   }
 `
 
-export const Link = styled.a``
-
 export const BrowseLogo = styled.img`
   width: 108px;
   height: 32px;
   margin-right: 30px;
+  cursor: pointer;
 
   @media screen and (max-width: 550px) {
     margin-right: 20px;

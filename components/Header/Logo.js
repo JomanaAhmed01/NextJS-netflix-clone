@@ -1,15 +1,15 @@
 import styled from "styled-components"
+import Link from "next/link"
 
 export default function Logo({ children, ...restProps }) {
   return (
-    <Link href="/" {...restProps}>
-      {children}
-      <Image src="/images/misc/logo.svg" {...restProps}></Image>
+    <Link href="/">
+      <Image src="/images/misc/logo.svg" {...restProps}>
+        {children}
+      </Image>
     </Link>
   )
 }
-
-export const Link = styled.a``
 
 export const Image = styled.img`
   margin-left: 55px;

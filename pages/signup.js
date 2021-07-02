@@ -10,6 +10,7 @@ import SignFormText from "../components/SignIn/SignFormText"
 import SignFormLink from "../components/SignIn/SignFormLink"
 import SignFormCaptcha from "../components/SignIn/SignFormCaptcha"
 import FooterCompound from "../compounds/FooterCompound"
+import Link from "next/link"
 
 export default function signup() {
   return (
@@ -25,7 +26,9 @@ export default function signup() {
             <SignFormInput type="password" placeholder="Password" />
             <SignFormBtn>Sign Up</SignFormBtn>
             <SignFormText>Already a user?</SignFormText>
-            <SignFormLink href="/signin">Sign in now.</SignFormLink>
+            <Link href="/signin">
+              <SignFormLink>Sign in now.</SignFormLink>
+            </Link>
             <SignFormCaptcha>
               This page is protected by Google reCAPTCHA to ensure you are not a
               bot.
