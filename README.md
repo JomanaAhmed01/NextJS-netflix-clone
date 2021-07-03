@@ -32,11 +32,11 @@
 
 <div align="center"><a name="menu"></a>
 
-![ScreenShot](https://github.com/JomanaAhmed01/JomanaAhmed01/blob/main/Images/1.jpg)
+![image](https://user-images.githubusercontent.com/66492958/124337424-d2a2c680-dba2-11eb-91f1-8af86b38740d.png)
 ![ScreenShot](https://github.com/JomanaAhmed01/JomanaAhmed01/blob/main/Images/2.jpg)
 ![ScreenShot](https://github.com/JomanaAhmed01/JomanaAhmed01/blob/main/Images/3.jpg)
 ![ScreenShot](https://github.com/JomanaAhmed01/JomanaAhmed01/blob/main/Images/4.jpg)
-![ScreenShot](https://github.com/JomanaAhmed01/JomanaAhmed01/blob/main/Images/5.jpg)
+![image](https://user-images.githubusercontent.com/66492958/124337399-b737bb80-dba2-11eb-81f1-633d77eaa1c1.png)
 ![ScreenShot](https://github.com/JomanaAhmed01/JomanaAhmed01/blob/main/Images/6.jpg)
 </div>
 
@@ -53,13 +53,13 @@ it redirects you to the home page when you click on it.
 It shows the main sentences of the website.
 
 ***2) Optform:***
-It's a text input field and a button,  It redirects you to the sign-up page once you click on the button.
+It's a text input field and a button,  It redirects you to the browse page once you click on the button.
 
 ***3) Jumbotron:***
-This section contains some images and paragraphs beside it, showing the advantages of Netflix. The data of this Jumbotron came from jumbo.json file.
+This section contains some images and paragraphs beside it, showing the advantages of Netflix.
 
 ***4) Frequently Asked Questions:***
-This section contains the FAQs in a form of accordion, when you click anywhere in the gray area of the question the answer appears below it, and then you can close the answer by clicking again on the same gray area of the question. The data of these FAQs came from faqs.json file.
+This section contains the FAQs in a form of accordion, when you click anywhere in the gray area of the question the answer appears below it, and then you can close the answer by clicking again on the same gray area of the question.
 
 ***5) Footer:***
 It contains useful links users may need it.
@@ -71,8 +71,8 @@ It contains useful links users may need it.
  
  <div align="center"><a name="menu"></a>
 
-![ScreenShot](https://github.com/JomanaAhmed01/JomanaAhmed01/blob/main/Images/7.jpg)
-![ScreenShot](https://github.com/JomanaAhmed01/JomanaAhmed01/blob/main/Images/8.jpg)
+![image](https://user-images.githubusercontent.com/66492958/124335960-7dfc4d00-db9c-11eb-97c1-34432db654ce.png)
+![image](https://user-images.githubusercontent.com/66492958/124336037-c9aef680-db9c-11eb-93bb-22e32e37667b.png)
 </div>
 
 The Sign-in Page consists of 3 main sections:
@@ -87,6 +87,12 @@ it redirects you to the home page when you click on it.
 - Password input field.
 
 - Sign-in Button: It has a validation option, if any field in the form is empty it will be disabled. If the form fields have any data it will be active and will send the data to the firebase database in the backend for authentication. It has also an error handling function.
+
+- checkbox field.
+
+- Need help button.
+
+- Login with Facebook button.
 
 - Link to Sign-up Page:  it redirects you to the sign-up page. 
 
@@ -128,27 +134,53 @@ It contains useful links users may need it.
 
 ***### The page is fully responsive to all mobile devices even the small ones. ###***
 
+ # Browse page
+ 
+<div align="center"><a name="menu"></a>
+
+![Screen Shot 2021-07-03 at 01 32 16](https://user-images.githubusercontent.com/66492958/124336513-94a3a380-db9e-11eb-8513-05d26a252149.png)
+![image](https://user-images.githubusercontent.com/66492958/124336844-05978b00-dba0-11eb-8ad5-ba7bf8e6ff83.png)
+![image](https://user-images.githubusercontent.com/66492958/124336887-4394af00-dba0-11eb-8339-3d47d9d848d3.png)
+![image](https://user-images.githubusercontent.com/66492958/124336917-5dce8d00-dba0-11eb-9c88-6cfcf8da8354.png)
+</div>
+
+The Browse Page consists of 4 main sections:
+
+***1) Header, which includes:***
+- Logo: 
+it redirects you to the home page when you click on it.
+
+- Films: 
+it redirects you to the films section when you click on it.
+
+- Series: 
+it redirects you to the series section when you click on it.
+
+***2) Films section, which includes:***
+- Films: 
+when you click on the image of the film, it shows to you film's title & description, it shows to you a button that allows you to open up the film's trailer, too.
+
+***3) Series section, which includes:***
+- Series: 
+when you click on the image of the series, it shows to you series's title & description, it shows to you a button that allows you to open up the series's trailer, too.
+
+***4) Footer:***
+It contains useful links users may need it.
+
+***### The page is fully responsive to all mobile devices even the small ones. ###***
+
+
 # Live Demo 
 
 
 # Technology Used
 
 I have built this project using the following tools & techniques:
-- React.JS
-- React Router.
-- React Forms.
+- Next.JS
+- Styled-Components
 - React Hooks.
-- useState.
-- useContext.
-- useEffect.
-- useHistory.
-- useState.
 - Compound Components.
-- JSX.
-- CSS Modules.
 - VSCode.
-- Github Actions.
-- Github Pages.
 
 # Author
 
