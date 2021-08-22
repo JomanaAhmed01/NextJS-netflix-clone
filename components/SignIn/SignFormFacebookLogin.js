@@ -4,11 +4,9 @@ import { SocialFacebook } from "@styled-icons/foundation/SocialFacebook"
 export default function SignFormFacebookLogin({ children, ...restProps }) {
   return (
     <Wrapper>
-      <Link href="https://www.facebook.com" {...restProps}>
-        {children}
-        <FacebookIcon />
-        Login with Facebook
-      </Link>
+      {children}
+      <FacebookIcon />
+      Login with Facebook
     </Wrapper>
   )
 }
@@ -17,11 +15,7 @@ export const Wrapper = styled.div`
   margin-top: 50px;
   display: flex;
   align-items: center;
-`
-
-export const Link = styled.a`
-  color: #737373;
-  font-size: 14px;
+  color: grey;
 `
 
 export const FacebookIcon = styled(SocialFacebook)`
@@ -29,5 +23,4 @@ export const FacebookIcon = styled(SocialFacebook)`
   width: 20px;
   height: 20px;
   margin-right: 5px;
-  margin-bottom: 5px;
 `
