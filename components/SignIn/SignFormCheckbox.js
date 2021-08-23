@@ -7,9 +7,6 @@ export default function SignFormBase({ children, ...restProps }) {
         <Input {...restProps}></Input>
         {children}Remember me
       </Label>
-      <Link href="#" {...restProps}>
-        Need help?
-      </Link>
     </Wrapper>
   )
 }
@@ -38,15 +35,4 @@ export const Label = styled.label`
   color: #b3b3b3;
   display: flex;
   align-items: center;
-`
-
-export const Link = styled.a`
-  font-size: 14px;
-  color: #b3b3b3;
-  margin-right: -18px;
-  margin-top: 2px;
-
-  :hover {
-    text-decoration: underline;
-  }
 `

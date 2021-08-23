@@ -498,7 +498,12 @@ export const BrowseDramaImage = styled.img`
 
   :hover {
     transform: scale(1.2);
+    transition: 0.5s;
     cursor: pointer;
+  }
+
+  :not(:hover) {
+    transition: 0.5s;
   }
 
   @media screen and (max-width: 1105px) {
@@ -595,7 +600,12 @@ export const BrowseThrillerImage = styled.img`
 
   :hover {
     transform: scale(1.2);
+    transition: 0.5s;
     cursor: pointer;
+  }
+
+  :not(:hover) {
+    transition: 0.5s;
   }
 
   @media screen and (max-width: 1105px) {
@@ -629,7 +639,12 @@ export const BrowseChildrenImage = styled.img`
 
   :hover {
     transform: scale(1.2);
+    transition: 0.5s;
     cursor: pointer;
+  }
+
+  :not(:hover) {
+    transition: 0.5s;
   }
 
   @media screen and (max-width: 1105px) {
@@ -663,7 +678,12 @@ export const BrowseSuspenseImage = styled.img`
 
   :hover {
     transform: scale(1.2);
+    transition: 0.5s;
     cursor: pointer;
+  }
+
+  :not(:hover) {
+    transition: 0.5s;
   }
 
   @media screen and (max-width: 1105px) {
@@ -697,7 +717,12 @@ export const BrowseRomanceImage = styled.img`
 
   :hover {
     transform: scale(1.2);
+    transition: 0.5s;
     cursor: pointer;
+  }
+
+  :not(:hover) {
+    transition: 0.5s;
   }
 
   @media screen and (max-width: 1105px) {
