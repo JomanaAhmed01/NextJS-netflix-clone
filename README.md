@@ -171,6 +171,7 @@ It contains useful links users may need it.
 
 
 # Live Demo 
+***Take a look on the live version here:*** https://bit.ly/nextjs-netflix-clone-live01 :octocat: :heart_eyes: 
 
 
 # Technology Used
