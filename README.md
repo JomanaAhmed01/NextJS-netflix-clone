@@ -6,6 +6,9 @@
 
 <p><font size="3">
   This is a clone of Netflix website built using <strong><em>Next.JS</em></strong> & <strong><em>Styled-Components</em></strong>, It's not a replica, and it doesn't have all the features of Netflix website. it's a similar version of Netflix with my own design touch, showing my abilities in Next.JS & Styled-Components to build something advanced like Netflix. It contains the home page, sign-in page, sign-up page & browse page.
+   <br>
+  <br>
+  <strong>Take a look at the live version here: https://bit.ly/nextjs-netflix-clone-live01 :octocat: :heart_eyes:</strong> 
 </p>
 
 ## Table of Contents
@@ -17,7 +20,6 @@
   - [browse Page](#browse-page)
 - [Live Demo](#live-demo)
 - [Technology Used](#technology-used)
-- [How To Use](#how-to-use)
 - [Author](#author)
 - [Show Your Support](#show-your-support)
 - [Acknowledgments](#acknowledgments)
